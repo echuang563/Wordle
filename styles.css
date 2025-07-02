@@ -1,0 +1,100 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-image: url("background.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100uh;
+}
+
+#gameBoard {
+  display: grid;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.wordRow {
+  display: flex;
+  gap: 5px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.correct {
+  background-color: #9BC09C;
+  color: #212121;
+}
+
+.wrong-place {
+  background-color: #FFC107;
+  color: #212121;
+}
+
+.wrong {
+  color: #888;
+  color: #212121;
+}
+
+#usedLetters {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  gap: 50px;
+}
+
+/* .letterBox {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #eee;
+  color: #000;
+} */
+
+.letterBox {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#restartButton {
+  margin-top: 20px;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .cell {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .letterBox {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
